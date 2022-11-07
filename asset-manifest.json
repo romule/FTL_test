@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/FTL_test/static/css/main.e7d55e34.css",
+    "main.js": "/FTL_test/static/js/main.56259959.js",
+    "static/media/cat_loader.gif": "/FTL_test/static/media/cat_loader.92466cdee91aff632f00.gif",
+    "index.html": "/FTL_test/index.html",
+    "main.e7d55e34.css.map": "/FTL_test/static/css/main.e7d55e34.css.map",
+    "main.56259959.js.map": "/FTL_test/static/js/main.56259959.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7d55e34.css",
+    "static/js/main.56259959.js"
+  ]
+}
