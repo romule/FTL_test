@@ -12,6 +12,7 @@ export default function App() {
   const [page, setPageQuery] = useState(1);
   const [hasNextPage, setNextPage] = useState(null);
 
+  // get DATA
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
@@ -35,14 +36,22 @@ export default function App() {
     setLoading(false);
   }, [sort_dir, sort_by, page]);
 
+  // HANDLE EVENTS
   function handleFilter(event) {
-    event ? setTypeFilter(event) : setTypeFilter("");
+    if (event) {
+      if (page !== 1) {
+        setPageQuery(1);
+        setFetcheData([]);
+      }
+      setTypeFilter(event);
+    } else setTypeFilter("");
   }
 
   function handleSort(eventID) {
     if (!!sort_by) setDirFilter(eventID);
   }
 
+  // ADD OBSERVER TO LAST ELEMENT
   const observer = useRef();
   const lastCard = useCallback(
     (node) => {
@@ -66,8 +75,6 @@ export default function App() {
     },
     [isLoading, hasNextPage]
   );
-
-  // page
 
   if (cards)
     return (
