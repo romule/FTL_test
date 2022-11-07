@@ -1,0 +1,48 @@
+.nav-bar {
+  position: sticky;
+  display: flex;
+  z-index: 1;
+  top: 0;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  background: #e76f51;
+}
+
+.nav-bar_box-inputs {
+  margin: 0px auto 8px;
+}
+.nav-bar_box-inputs .input {
+  margin-left: 12px;
+}
+
+.nav-bar_box-inputs button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #f4a36100;
+  background-color: #e9c46a;
+}
+
+.active button {
+  border: 2px solid #f4a261;
+  box-shadow: 3px 3px 8px 1px #264653;
+}
+
+.nav-bar_box-inputs button:not(button:first-child) {
+  margin-left: 10px;
+}
+
+.nav-bar_box-inputs button:active {
+  box-shadow: 1px 1px 5px 1px #1b323b;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
